@@ -1,0 +1,22 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.7;
+
+contract SimpleStorage{
+    //Data types - bool, uint, int, address, bytes
+
+    // To Create a variable - dataype variable_name = value
+    // bool hasFavouriteNumber = true;
+    // uint256 favouriteNumber = 123;
+    // string favouriteNumberInText = "Hello World!";
+    // int256 favouriteInt = -3;
+    // address myAddress = 0xA2b61636239B158f795319e5e2227B9dAe4053cd;
+    // bytes32 favByte = "cat"
+
+    uint256 public favNumber;
+
+    // Functions
+    function store(uint256 newValue) public{
+        favNumber = newValue;
+    }
+
+}
