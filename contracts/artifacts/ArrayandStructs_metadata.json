@@ -6,16 +6,21 @@
 	"output": {
 		"abi": [
 			{
-				"inputs": [],
-				"name": "add",
-				"outputs": [
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "_name",
+						"type": "string"
+					},
 					{
 						"internalType": "uint256",
-						"name": "",
+						"name": "_favNumber",
 						"type": "uint256"
 					}
 				],
-				"stateMutability": "pure",
+				"name": "addPerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -32,8 +37,14 @@
 				"type": "function"
 			},
 			{
-				"inputs": [],
-				"name": "retriveFavNumber",
+				"inputs": [
+					{
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "nameToFavNumber",
 				"outputs": [
 					{
 						"internalType": "uint256",
@@ -48,13 +59,24 @@
 				"inputs": [
 					{
 						"internalType": "uint256",
-						"name": "_newValue",
+						"name": "",
 						"type": "uint256"
 					}
 				],
-				"name": "store",
-				"outputs": [],
-				"stateMutability": "nonpayable",
+				"name": "people",
+				"outputs": [
+					{
+						"internalType": "uint256",
+						"name": "favNumber",
+						"type": "uint256"
+					},
+					{
+						"internalType": "string",
+						"name": "name",
+						"type": "string"
+					}
+				],
+				"stateMutability": "view",
 				"type": "function"
 			}
 		],
@@ -71,7 +93,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"contracts/SimpleStorage.sol": "SimpleStorage"
+			"contracts/ArrayandStructs.sol": "ArrayandStructs"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -85,12 +107,12 @@
 		"remappings": []
 	},
 	"sources": {
-		"contracts/SimpleStorage.sol": {
-			"keccak256": "0xa250b5cc68dceff24717128b98cf642da7b34f586f9e2b5820b225ecc1cacb62",
+		"contracts/ArrayandStructs.sol": {
+			"keccak256": "0x959e9e7d0a44d426efd7ac7341384b6f2fd278e631284132257a715b509dc1db",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://56eebfa766d3581340fd1ba4813808a72306b7fb675b4643914d8796b34c78f5",
-				"dweb:/ipfs/QmdDq9PYj41cZMJLK56bkLXwrekSs3YhKJpnazRHgCz2Sk"
+				"bzz-raw://6ef8f78ecaa114f69ff7d1e736dc93118f92ad6c1e91548fd43b0b9fb0dd6b08",
+				"dweb:/ipfs/QmXmR9RzxFeJtCMs5XfSoFJ7wnNRDuFMRuRUGoEpVovw4j"
 			]
 		}
 	},

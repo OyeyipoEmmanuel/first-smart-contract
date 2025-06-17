@@ -15,8 +15,21 @@ contract SimpleStorage{
     uint256 public favNumber;
 
     // Functions
-    function store(uint256 newValue) public{
-        favNumber = newValue;
+    function store(uint256 _newValue) public{
+        favNumber = _newValue;
+        favNumber = favNumber + 1;
+    }
+
+    // A function that has "view" means we're just gonna read something from the function/contract. It also disallows any modification of state
+    // A function that has pure will not allow you to read or modify a state. It disallows both read and modification of state in a function
+
+    // Calling view or pure function is free unless you're calling it in a function that cost gas (i.e in a function that modifies the blockchain)
+    function retriveFavNumber() public view returns(uint256){
+        return favNumber;
+    }
+
+    function add() public pure returns(uint256){
+        return (1 + 1);
     }
 
 }
